@@ -36,4 +36,9 @@ public class RentServiceRest {
     public boolean removeCar(@PathVariable String plateNumber) {
         return carService.removeCar(plateNumber);
     }
+
+    @GetMapping("/cars/count")
+    public int countCars() {
+        return carService.getCars().size();
+    }
 }
